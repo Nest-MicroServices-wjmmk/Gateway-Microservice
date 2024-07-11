@@ -27,7 +27,7 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Architecture.
-![](https://github.com/Nest-MicroServices-wjmmk/Gateway-Microservice/tree/main/src/img/Architecture.png)
+![](https://github.com/Nest-MicroServices-wjmmk/Gateway-Microservice/blob/main/src/img/Architecture.png)
 
 ## Support
 
