@@ -10,10 +10,6 @@ export class ProductsController {
     @Inject(PRODUCT_SERVICE) private readonly productsClient: ClientGrpcProxy
   ) {}
   
-  @Post()
-  createPoduct() {
-    return 'Crea un producto';
-  }
 
   @Get()
   findAllProducts(@Query() paginationDto: PaginationDto) {
@@ -32,5 +28,10 @@ export class ProductsController {
       throw new RpcException(err);
       
     }
+  }
+
+  @Post()
+  createPoduct() {
+    return 'Crea un producto';
   }
 }
