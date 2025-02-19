@@ -22,6 +22,6 @@ async function bootstrap() {
 
   await app.listen(envs.port);
 
-  logger.log(`Cateway running on port: ${reset}${envs.port}`);
+  logger.log(`Gateway running on port: ${reset}${envs.port}`);
 }
 bootstrap();
