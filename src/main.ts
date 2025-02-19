@@ -10,6 +10,7 @@ async function bootstrap() {
   const reset = '\x1b[33m'; //Pone en color tierra el N° del Puerto donde la aplicacion Arranca.
 
   const app = await NestFactory.create(AppModule);
+
   app.setGlobalPrefix('api');
   app.useGlobalPipes(
     new ValidationPipe({
@@ -19,9 +20,7 @@ async function bootstrap() {
   )
 
   app.useGlobalFilters(new RpcCustomExceptionFilter)
-
   await app.listen(envs.port);
-
   logger.log(`Gateway running on port: ${reset}${envs.port}`);
 }
 bootstrap();
