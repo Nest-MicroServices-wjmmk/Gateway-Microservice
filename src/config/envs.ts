@@ -6,13 +6,17 @@ interface EnvVars {
     DATABASE_URL: string;
     PRODUCTS_MICROSRVICE_HOST: string;
     PRODUCTS_MICROSRVICE_PORT: number;
+    ORDERS_MICROSRVICE_HOST: string;
+    ORDERS_MICROSRVICE_PORT: number;
 }
 
 const envSchema = joi.object({
     PORT: joi.number().required(),
     DATABASE_URL: joi.string().required(),
     PRODUCTS_MICROSRVICE_HOST: joi.string().required(),
-    PRODUCTS_MICROSRVICE_PORT: joi.number().required()
+    PRODUCTS_MICROSRVICE_PORT: joi.number().required(),
+    ORDERS_MICROSRVICE_HOST: joi.string().required(),
+    ORDERS_MICROSRVICE_PORT: joi.number().required()
 })
 .unknown(true);
 
@@ -26,5 +30,7 @@ export const envs = {
     port: envVars.PORT,
     dataBaseUrl: envVars.DATABASE_URL,
     productsMicroserviceHost: envVars.PRODUCTS_MICROSRVICE_HOST,
-    productsMicroservicePort: envVars.PRODUCTS_MICROSRVICE_PORT
+    productsMicroservicePort: envVars.PRODUCTS_MICROSRVICE_PORT,
+    ordersMicroserviceHost: envVars.ORDERS_MICROSRVICE_HOST,
+    ordersMicroservicePort: envVars.ORDERS_MICROSRVICE_PORT
 }
