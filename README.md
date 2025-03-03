@@ -26,6 +26,18 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+## Gateway Client
+This is a communication point between our clients and the services. It is responsible for receiving requests, sending them to the corresponding services and returning the response to the End Client.
+
+## How to run the Project
+
+1. Clone the repository.
+2. Install dependencies.
+3. Create a '.env' file based on the 'env.template'
+4. Have the microservices that are going to be consumed up.
+5. Launch the Project with 'npm run start:dev'.
+
 ## Architecture.
 ![](https://github.com/Nest-MicroServices-wjmmk/Gateway-Microservice/blob/main/src/img/Architecture.png)
 
