@@ -34,7 +34,7 @@ This is a communication point between our clients and the services. It is respon
 
 1. Clone the repository.
 2. Install dependencies.
-3. Create a '.env' file based on the 'env.template'
+3. Create a '.env' file based on the '.env.example'
 4. Have the microservices that are going to be consumed up.
 5. Launch the Project with 'npm run start:dev'.
 
