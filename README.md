@@ -36,7 +36,8 @@ This is a communication point between our clients and the services. It is respon
 2. Install dependencies.
 3. Create a '.env' file based on the '.env.example'
 4. Have the microservices that are going to be consumed up.
-5. Launch the Project with 'npm run start:dev'.
+5. Start the NATS server.  `docker run -d --name nast-server -p 4222:4222 -p 8222:8222 nats`
+6. Launch the Project with 'npm run start:dev'.
 
 ## Architecture.
 ![](https://github.com/Nest-MicroServices-wjmmk/Gateway-Microservice/blob/main/src/img/Architecture.png)
