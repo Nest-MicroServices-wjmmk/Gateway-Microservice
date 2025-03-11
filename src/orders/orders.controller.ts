@@ -13,16 +13,23 @@ export class OrdersController {
 
   @Post()
   async createOrder(@Body() createOrderDto: CreateOrderDto) {
-    const order = await firstValueFrom(
-      this.client.send('createOrder', createOrderDto)
-    );
-    return order;
+    try {
+      const order = await firstValueFrom(
+        this.client.send('createOrder', createOrderDto)
+      );
+      return order;
+    } catch (error) {
+      throw new RpcException(error.message);
+    }
   }
 
-  @Get()
-  findAllOrders(@Query() orderPaginationDto: OrderPaginationDto) {
+  @Get( )
+  async findAllOrders(@Query() orderPaginationDto: OrderPaginationDto) {
     try {
-      return this.client.send('findAllOrders', orderPaginationDto);
+      const orders = await firstValueFrom(
+        this.client.send('findAllOrders', orderPaginationDto)
+      )
+      return orders;
     } catch (error) {
       throw new BadRequestException(error.message);
     }
