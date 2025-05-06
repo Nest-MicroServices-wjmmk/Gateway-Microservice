@@ -20,11 +20,12 @@ export class ProductsController {
   }
 
   @Get()
-  findAllProducts(@Query() paginationDto: PaginationDto) {
+  async findAllProducts(@Query() paginationDto: PaginationDto) {
     try {
-      return this.client.send({ cmd: 'findAll_products' }, paginationDto);
+      const products = await firstValueFrom(this.client.send({ cmd: 'findAll_products' }, paginationDto));
+      return products
     } catch (error) {
-      throw new BadRequestException(error.message);
+      throw new RpcException(error.message);
     }
   }
 
