@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 FROM node:20
+=======
+FROM node:20-alpine
+>>>>>>> 0fcbada1128cdf8fd7d72ffb9bc0dabacc806c5a
 
 WORKDIR /usr/src/app
 
